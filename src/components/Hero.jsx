@@ -56,7 +56,7 @@ const Hero = () => {
             <span style={{ fontSize: '0.9em', opacity: 0.7 }}>B.Tech in Civil Engineering</span>
           </p>
           <div className="social-links">
-            <a href="https://github.com/Anirban200" target="_blank" rel="noopener noreferrer" className="btn-social">GitHub</a>
+            <a href="https://github.com/anirbandebnath600-oss" target="_blank" rel="noopener noreferrer" className="btn-social">GitHub</a>
             <a href="https://www.linkedin.com/in/anirban-debnath2003/" target="_blank" rel="noopener noreferrer" className="btn-social">LinkedIn</a>
             <a href="mailto:anirbandebnath600@gmail.com" className="btn-social">Email</a>
             {/* Add more social links if needed */}
@@ -66,7 +66,7 @@ const Hero = () => {
         <div className="hero-image-container">
           <div className="image-wrapper">
             {/* Using the new uploaded profile picture */}
-            <img src="/profile-pic.jpg" alt="Anirban Debnath" className="profile-img" />
+            <img src={`${import.meta.env.BASE_URL}profile-pic.jpg`} alt="Anirban Debnath" className="profile-img" />
           </div>
         </div>
       </div>
