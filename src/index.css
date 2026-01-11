@@ -1,0 +1,135 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+
+  /* Color Palette */
+  --bg-primary: #0B0C10;
+  /* Deep Charcoal */
+  --bg-secondary: #1F2833;
+  /* Lighter Gray/Blue for Cards */
+  --text-primary: #FFFFFF;
+  --text-secondary: #C5C6C7;
+  /* Light Gray */
+  --accent-blue: #66FCF1;
+  /* Standard Cyber Blue - keeping as backup */
+
+  /* The User's requested Gradient (Orange -> Purple) */
+  /* Approximated from "uploaded_image_1768142367037.png" description */
+  --gradient-main: linear-gradient(135deg, #FF6B6B 0%, #556270 100%);
+  /* Better Orange-Purple Gradient */
+  --gradient-hero: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  /* Just a placeholder nice one, let's try a better one */
+  --gradient-brand: linear-gradient(to right, #e14fad 0%, #f9d423 100%);
+
+  /* Let's use a rich Orange to Purple */
+  --gradient-primary: linear-gradient(90deg, #FF512F 0%, #DD2476 100%);
+
+  --spacing-unit: 8px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+
+  /* Navbar vars default (Dark) */
+  --nav-bg: rgba(31, 40, 51, 0.8);
+  --nav-border: rgba(255, 255, 255, 0.1);
+
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+[data-theme='light'] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F3F4F6;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --accent-blue: #3B82F6;
+
+  /* Navbar vars (Light) */
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  /* Slightly more opaque for readability */
+  --nav-border: rgba(0, 0, 0, 0.1);
+
+  /* Slightly adjusted gradient for light mode if needed, or keep same */
+  --gradient-primary: linear-gradient(90deg, #FF512F 0%, #DD2476 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: block;
+  /* Vite default is flex place-items-center, which we don't want */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
